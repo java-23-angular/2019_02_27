@@ -1,0 +1,7 @@
+<nav class="nav">
+  <a routerLink="/" class="nav-link">Home</a>
+  <a routerLink="/contacts" class="nav-link" *ngIf="isLogged">Contacts</a>
+  <a routerLink="/add" class="nav-link" *ngIf="isLogged">Add</a>
+  <a routerLink="/login" class="nav-link" style="margin-left: auto" *ngIf="!isLogged">Login</a>
+  <a routerLink="/" class="nav-link" style="margin-left: auto" *ngIf="isLogged" (click)="onLogout()">Logout</a>
+</nav>
